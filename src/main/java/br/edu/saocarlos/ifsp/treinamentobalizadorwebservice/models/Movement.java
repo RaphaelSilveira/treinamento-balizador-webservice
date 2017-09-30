@@ -2,10 +2,10 @@ package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models;
 
 import java.util.List;
 
-public class Moviment {
+public class Movement {
 
     private List<String> coordinates;
-    private String moviment;
+    private String movement;
 
     public List<String> getCoordinates() {
         return coordinates;
@@ -15,11 +15,11 @@ public class Moviment {
         this.coordinates = coordinates;
     }
 
-    public String getMoviment() {
-        return moviment;
+    public String getMovement() {
+        return movement;
     }
 
-    public void setMoviment(String moviment) {
-        this.moviment = moviment;
+    public void setMovement(String movement) {
+        this.movement = movement;
     }
 }
