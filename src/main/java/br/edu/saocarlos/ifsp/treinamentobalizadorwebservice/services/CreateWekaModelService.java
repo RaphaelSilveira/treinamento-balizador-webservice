@@ -3,9 +3,13 @@ package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.services;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import weka.classifiers.Classifier;
+import weka.classifiers.Evaluation;
 import weka.classifiers.functions.SMO;
+import weka.classifiers.functions.SimpleLogistic;
+import weka.classifiers.lazy.IBk;
 import weka.core.Instances;
 import weka.core.SerializationHelper;
+import weka.core.converters.ConverterUtils;
 
 import java.io.*;
 
@@ -26,14 +30,15 @@ public class CreateWekaModelService {
             modelFile.delete();
         }
 
-        Classifier classifier = new SMO();
+        ConverterUtils.DataSource dataSource = new ConverterUtils.DataSource(arff);
 
-        Instances instances = new Instances(new BufferedReader(new FileReader(arff)));
+        Instances instances = dataSource.getDataSet();
         instances.setClassIndex(instances.numAttributes() - 1);
 
-        classifier.buildClassifier(instances);
+        SimpleLogistic smo = new SimpleLogistic();
+        smo.buildClassifier(instances);
 
-        SerializationHelper.write(model, classifier);
+        SerializationHelper.write(model, smo);
     }
 
 }
