@@ -39,6 +39,8 @@ public class MovementService {
             }
         }
 
+        logger.info("Is correct: {}", correct);
+
         return correct;
     }
 

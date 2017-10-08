@@ -1,5 +1,7 @@
 package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class Movement {
@@ -11,6 +13,7 @@ public class Movement {
         return coordinates;
     }
 
+    @JsonProperty("Coordinates")
     public void setCoordinates(List<String> coordinates) {
         this.coordinates = coordinates;
     }
@@ -19,6 +22,7 @@ public class Movement {
         return movement;
     }
 
+    @JsonProperty("Movement")
     public void setMovement(String movement) {
         this.movement = movement;
     }
