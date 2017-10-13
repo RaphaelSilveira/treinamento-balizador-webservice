@@ -8,11 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import weka.classifiers.Classifier;
-import weka.core.DenseInstance;
 import weka.core.Instance;
 import weka.core.SerializationHelper;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -57,7 +55,7 @@ public class MovementService {
     private Instance getInstance(Movement movement) throws Exception {
         logger.info("Size: {}", movement.getCoordinates().size());
 
-        Instance instance = new DenseInstance(1261);
+        Instance instance = new Instance(1261);
 
         for (int i = 0; i < movement.getCoordinates().size(); i++) {
             String value = movement.getCoordinates().get(i).replace(",", ".");

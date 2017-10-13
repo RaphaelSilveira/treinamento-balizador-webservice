@@ -41,19 +41,19 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!--<dependency>
+		<dependency>
 			<groupId>nz.ac.waikato.cms.weka</groupId>
 			<artifactId>weka-stable</artifactId>
 			<version>3.6.12</version>
-		</dependency>-->
+		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>weka</groupId>
 			<artifactId>weka-stable</artifactId>
 			<version>3.8</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/resources/weka.jar</systemPath>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>
