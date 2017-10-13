@@ -7,8 +7,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import weka.classifiers.Classifier;
+import weka.core.DenseInstance;
 import weka.core.Instance;
 import weka.core.SerializationHelper;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 @Service
 public class MovementService {
@@ -45,13 +51,31 @@ public class MovementService {
     }
 
     private Instance getInstance(Movement movement) throws Exception {
-        Instance instance = new Instance(movement.getCoordinates().size());
+        logger.info("Size: {}", movement.getCoordinates().size());
+
+        Instance instance = new DenseInstance(1261);
 
         for (int i = 0; i < movement.getCoordinates().size(); i++) {
-            instance.setValue(i, Double.parseDouble(movement.getCoordinates().get(i)));
+            String value = movement.getCoordinates().get(i).replace(",", ".");
+            instance.setValue(i, Double.parseDouble(value));
         }
 
         return instance;
+    }
+
+    public void save(Movement movement) throws IOException {
+        logger.info("Size: {}", movement.getCoordinates().size());
+
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < movement.getCoordinates().size(); i++) {
+            String value = movement.getCoordinates().get(i).replace(",", ".");
+            builder.append(value).append(",");
+        }
+
+        builder.append(movement.getMovement()).append("\n");
+
+        Files.write(Paths.get(arff), builder.toString().getBytes(), StandardOpenOption.APPEND);
     }
 
 }
