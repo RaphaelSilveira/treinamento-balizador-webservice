@@ -4,6 +4,7 @@ import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.Utils.AttributesUtil
 import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models.Movement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import weka.classifiers.Classifier;
@@ -29,6 +30,9 @@ public class MovementService {
 
     @Value("${weka.arff.name}")
     private String arff;
+
+    @Autowired
+    private CreateWekaModelService createWekaModelService;
 
     public Boolean verifyMovement(Movement movement) throws Exception {
         Boolean correct = Boolean.FALSE;
@@ -63,7 +67,7 @@ public class MovementService {
         return instance;
     }
 
-    public void save(Movement movement) throws IOException {
+    public void save(Movement movement) throws Exception {
         logger.info("Size: {}", movement.getCoordinates().size());
 
         StringBuilder builder = new StringBuilder();
@@ -76,6 +80,7 @@ public class MovementService {
         builder.append(movement.getMovement()).append("\n");
 
         Files.write(Paths.get(arff), builder.toString().getBytes(), StandardOpenOption.APPEND);
+        createWekaModelService.createModel();
     }
 
 }

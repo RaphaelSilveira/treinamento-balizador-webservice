@@ -1,6 +1,7 @@
 package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.controllers;
 
 import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models.Movement;
+import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.services.CreateWekaModelService;
 import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.services.MovementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,15 +15,17 @@ public class MovementController {
     @Autowired
     private MovementService movementService;
 
-    @RequestMapping(value = "/verify-moviment", method = RequestMethod.POST)
+    @Autowired
+    private CreateWekaModelService createWekaModelService;
+
+    @RequestMapping(value = "/verify-movement", method = RequestMethod.POST)
     public Boolean verifyMovement(@RequestBody Movement movement) throws Exception {
         return movementService.verifyMovement(movement);
     }
 
-    @RequestMapping(value = "/save-moviment", method = RequestMethod.POST)
+    @RequestMapping(value = "/save-movement", method = RequestMethod.POST)
     public ResponseEntity saveMovement(@RequestBody Movement movement) throws Exception {
         movementService.save(movement);
         return new ResponseEntity(HttpStatus.OK);
     }
-
 }
