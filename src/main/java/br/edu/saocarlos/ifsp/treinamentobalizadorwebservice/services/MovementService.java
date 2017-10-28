@@ -14,6 +14,7 @@ import weka.core.SerializationHelper;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.List;
 
 @Service
 public class MovementService {
@@ -54,6 +55,7 @@ public class MovementService {
 
     private Instance getInstance(Movement movement) throws Exception {
         logger.info("Size: {}", movement.getCoordinates().size());
+        logger.info("Movement: {}", movement.getMovement());
 
         Instance instance = new Instance(1261);
 

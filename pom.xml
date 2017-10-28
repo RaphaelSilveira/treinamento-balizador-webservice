@@ -47,13 +47,13 @@
 			<version>3.6.12</version>
 		</dependency>
 
-		<!--<dependency>
-			<groupId>weka</groupId>
-			<artifactId>weka-stable</artifactId>
-			<version>3.8</version>
+		<dependency>
+			<groupId>sqlite</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.8.10.1</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/weka.jar</systemPath>
-		</dependency>-->
+			<systemPath>${project.basedir}/src/main/resources/sqlite-jdbc-3.8.10.1.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>
