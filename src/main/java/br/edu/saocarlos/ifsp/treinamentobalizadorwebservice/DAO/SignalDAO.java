@@ -42,8 +42,6 @@ public class SignalDAO {
                 e.printStackTrace();
             }
         });
-
-        connection.close();
     }
 
     public Signal findOneByKey(String key) throws SQLException {
@@ -67,7 +65,6 @@ public class SignalDAO {
         }
 
         preparedStatement.close();
-        connection.close();
 
         return signal;
     }
@@ -82,6 +79,8 @@ public class SignalDAO {
         preparedStatement.setString(2, signal.getNameFile());
 
         preparedStatement.executeQuery();
+
+        preparedStatement.close();
     }
 
     public List<Signal> findAllWithActiveTrue() throws SQLException {
@@ -105,7 +104,6 @@ public class SignalDAO {
         }
 
         statement.close();
-        connection.close();
 
         return signals;
     }
