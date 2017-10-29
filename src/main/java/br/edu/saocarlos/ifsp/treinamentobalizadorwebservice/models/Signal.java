@@ -10,7 +10,7 @@ public class Signal {
     private Integer insertsInArff;
     private Boolean active;
 
-    @JsonProperty("FileName")
+    @JsonProperty("File")
     public String getNameFile() {
         return nameFile;
     }
