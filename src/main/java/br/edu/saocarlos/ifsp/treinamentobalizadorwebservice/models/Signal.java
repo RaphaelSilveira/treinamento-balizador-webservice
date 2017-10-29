@@ -1,5 +1,7 @@
 package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Signal {
 
     private String nameFile;
@@ -8,6 +10,7 @@ public class Signal {
     private Integer insertsInArff;
     private Boolean active;
 
+    @JsonProperty("FileName")
     public String getNameFile() {
         return nameFile;
     }
@@ -16,6 +19,7 @@ public class Signal {
         this.nameFile = nameFile;
     }
 
+    @JsonProperty("Name")
     public String getName() {
         return name;
     }
@@ -24,6 +28,7 @@ public class Signal {
         this.name = name;
     }
 
+    @JsonProperty("Key")
     public String getKey() {
         return key;
     }
@@ -32,6 +37,7 @@ public class Signal {
         this.key = key;
     }
 
+    @JsonProperty("InsertsInArff")
     public Integer getInsertsInArff() {
         return insertsInArff;
     }
