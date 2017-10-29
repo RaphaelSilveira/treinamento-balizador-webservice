@@ -4,6 +4,7 @@ public class Signal {
 
     private String nameFile;
     private String name;
+    private String key;
     private Integer insertsInArff;
     private Boolean active;
 
@@ -21,6 +22,14 @@ public class Signal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public Integer getInsertsInArff() {

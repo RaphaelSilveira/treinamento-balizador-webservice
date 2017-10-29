@@ -1,6 +1,7 @@
 package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.services;
 
 import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.DAO.SignalDAO;
+import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models.Movement;
 import br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.models.Signal;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,16 @@ public class SignalService {
     public List<Signal> findAllWithActiveTrue() throws SQLException {
         SignalDAO signalDAO = new SignalDAO();
         return signalDAO.findAllWithActiveTrue();
+    }
+
+    public void addInsertsOnArff(Movement movement) throws SQLException {
+        SignalDAO signalDAO = new SignalDAO();
+        Signal signal = signalDAO.findOneByKey(movement.getMovement());
+
+        Integer insertsInArff = signal.getInsertsInArff() + 1;
+        signal.setInsertsInArff(insertsInArff);
+
+        signalDAO.updateInsertsInArff(signal);
     }
 
 }

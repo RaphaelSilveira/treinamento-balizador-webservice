@@ -33,6 +33,9 @@ public class MovementService {
     @Autowired
     private CreateWekaModelService createWekaModelService;
 
+    @Autowired
+    private SignalService signalService;
+
     public Boolean verifyMovement(Movement movement) throws Exception {
         Boolean correct = Boolean.FALSE;
 
@@ -81,6 +84,8 @@ public class MovementService {
 
         Files.write(Paths.get(arff), builder.toString().getBytes(), StandardOpenOption.APPEND);
         createWekaModelService.createModel();
+
+        signalService.addInsertsOnArff(movement);
     }
 
 }
