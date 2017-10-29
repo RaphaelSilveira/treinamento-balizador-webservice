@@ -112,280 +112,280 @@ public class SignalDAO {
         List<String> inserts = new ArrayList<>();
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Sinaleiro', " +
             "'sinaleiro.mp4', " +
+            "'Sinaleiro', " +
             "'Sinaleiro'," +
             "11, " +
             "'true')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Identificação de rampa', " +
             "'identificacao_rampa.mp4', " +
+            "'Identificação de rampa', " +
             "'IdentificacaoRampa'," +
             "12, " +
             "'true')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Prosseguir para proximo sinaleiro à direita como orientado pela torre controle', " +
             "'prosseguir_para_proximo_sinaleiro_como_orientado_pela_torre_controle_direita.mp4', " +
+            "'Prosseguir para proximo sinaleiro à direita como orientado pela torre controle', " +
             "'ProsseguirParaProximoSinaleiroComoOrientadoPelaTorreControleDireita'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Prosseguir para proximo sinaleiro à esquerda como orientado pela torre controle esquerda', " +
             "'prosseguir_para_proximo_sinaleiro_como_orientado_pela_torre_controle_esquerda.mp4', " +
+            "'Prosseguir para proximo sinaleiro à esquerda como orientado pela torre controle esquerda', " +
             "'ProsseguirParaProximoSinaleiroComoOrientadoPelaTorreControleEsquerda'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Prosseguir em frente', " +
             "'prosseguir_em_frente.mp4', " +
+            "'Prosseguir em frente', " +
             "'ProsseguirFrente'," +
             "12, " +
             "'true')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Girar para esquerda', " +
             "'girar_para_esquerda.mp4', " +
+            "'Girar para esquerda', " +
             "'GirarParaEsquerda'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Girar para direita', " +
             "'girar_para_direita.mp4', " +
+            "'Girar para direita', " +
             "'GirarParaDireita'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Parada normal', " +
             "'parada_normal.mp4', " +
+            "'Parada normal', " +
             "'ParadaNormal'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Parada emergencial', " +
             "'parada_emergencial.mp4', " +
+            "'Parada emergencial', " +
             "'ParadaEmergencia'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Acionar ou soltar freios', " +
             "'acionar_ou_soltar_freios.mp4', " +
+            "'Acionar ou soltar freios', " +
             "'AcionarOuSoltarFreios'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Calços colocados ou retirados', " +
             "'calcos_colocados_ou_retirados.mp4', " +
+            "'Calços colocados ou retirados', " +
             "'CalcosColocadosOuRetirados'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Acionamento de motores', " +
             "'acionamento_de_motores.mp4', " +
+            "'Acionamento de motores', " +
             "'AcionamentoMotores'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Cortar motores', " +
-            "'cortar_motores.mp4', " +
+             "'cortar_motores.mp4', " +
+             "'Cortar motores', " +
              "'CortarMotores'," +
-            "0, " +
+             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Reduzir velocidade', " +
             "'reduzir_velocidade.mp4', " +
+            "'Reduzir velocidade', " +
             "'ReduzirVelocidade'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Reduzir velocidade do motor da direita', " +
-            "'reduzir_velocidade_do_motor_da_direita.mp4', " +
+             "'reduzir_velocidade_do_motor_da_direita.mp4', " +
+             "'Reduzir velocidade do motor da direita', " +
             "'ReduzirVelocidadeMotorDireita'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Reduzir velocidade do motor da esquerda', " +
             "'reduzir_velocidade_do_motor_da_esquerda.mp4', " +
+            "'Reduzir velocidade do motor da esquerda', " +
             "'ReduzirVelocidadeMotorEsquerda'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Recuar', " +
             "'recuar.mp4', " +
+            "'Recuar', " +
             "'Recuar'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Virar enquanto recuando para direita', " +
             "'virar_enquanto_recuando_direita.mp4', " +
+            "'Virar enquanto recuando para direita', " +
             "'VirarEnquantoRecuandoDireita'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Virar enquanto recuando para esquerda', " +
             "'virar_enquanto_recuando_esquerda.mp4', " +
+            "'Virar enquanto recuando para esquerda', " +
             "'VirarEnquantoRecuandoEsquerda'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Afirmativo', " +
             "'afirmativo.mp4', " +
+            "'Afirmativo', " +
             "'Afirmativo'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Voo pairado', " +
             "'voo_pairado.mp4', " +
+            "'Voo pairado', " +
             "'VooPairado'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Subida', " +
             "'subida.mp4', " +
+            "'Subida', " +
             "'Subida'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Descida', " +
             "'descida.mp4', " +
+            "'Descida', " +
             "'Descida'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Deslocamento horizontal para direita', " +
             "'deslocamento_horizontal_para_direita.mp4', " +
+            "'Deslocamento horizontal para direita', " +
             "'DeslocamentoHorizontalParaDireita'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Deslocamento horizontal para esquerda', " +
             "'deslocamento_horizontal_para_esquerda.mp4', " +
+            "'Deslocamento horizontal para esquerda', " +
             "'DeslocamentoHorizontalParaEsquerda'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Pouso', " +
             "'pouso.mp4', " +
+            "'Pouso', " +
             "'Pouso'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Fogo', " +
             "'fogo.mp4', " +
+            "'Fogo', " +
             "'Fogo'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Manter posição', " +
             "'manter_posicao.mp4', " +
+            "'Manter posição', " +
             "'ManterPosicao'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Despacho de aeronave', " +
             "'despacho_aeronave.mp4', " +
+            "'Despacho de aeronave', " +
             "'DespachoAeronave'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Não toque nos comandos', " +
             "'nao_toque_comandos.mp4', " +
+            "'Não toque nos comandos', " +
             "'NaoToqueComandos'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Conectar alimentação elétrica no solo', " +
             "'conectar_alimentacao_elétrica_no_solo.mp4', " +
+            "'Conectar alimentação elétrica no solo', " +
             "'ConectarAlimentacaoEletricaSolo'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Desconectar alimentação elétrica no solo', " +
             "'desconectar_alimentacao_elétrica_no_solo.mp4', " +
+            "'Desconectar alimentação elétrica no solo', " +
             "'DesconectarAlimentacaoEletrica'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Negativo', " +
             "'negativo.mp4', " +
+            "'Negativo', " +
             "'Negativo'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Estabelecer comunicação via interfone', " +
             "'estabelecer_comunicacao_interfone.mp4', " +
+            "'Estabelecer comunicação via interfone', " +
             "'EstabelecerComunicacaoInterfone'," +
             "0, " +
             "'false')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
-            "'Abrir ou fechar escadas', " +
             "'abrir_fechar_escadas.mp4', " +
+            "'Abrir ou fechar escadas', " +
             "'AbrirFecharEscadas'," +
             "0, " +
             "'false')"
