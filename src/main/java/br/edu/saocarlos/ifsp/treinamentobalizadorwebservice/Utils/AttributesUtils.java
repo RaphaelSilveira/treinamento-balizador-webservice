@@ -17,6 +17,14 @@ public class AttributesUtils {
             case 2:
                 attribute = "Sinaleiro";
                 break;
+
+            case 3:
+                attribute = "GirarParaDireita";
+                break;
+
+            case 4:
+                attribute = "GirarParaEsquerda";
+                break;
         }
 
         return attribute;

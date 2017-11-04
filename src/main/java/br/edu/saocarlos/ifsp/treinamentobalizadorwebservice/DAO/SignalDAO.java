@@ -78,7 +78,7 @@ public class SignalDAO {
         preparedStatement.setInt(1, signal.getInsertsInArff());
         preparedStatement.setString(2, signal.getNameFile());
 
-        preparedStatement.executeQuery();
+        preparedStatement.executeUpdate();
 
         preparedStatement.close();
     }
@@ -115,7 +115,7 @@ public class SignalDAO {
             "'sinaleiro.mp4', " +
             "'Sinaleiro', " +
             "'Sinaleiro'," +
-            "11, " +
+            "0, " +
             "'true')"
         );
 
@@ -123,7 +123,7 @@ public class SignalDAO {
             "'identificacao_rampa.mp4', " +
             "'Identificação de rampa', " +
             "'IdentificacaoRampa'," +
-            "12, " +
+            "0, " +
             "'true')"
         );
 
@@ -147,7 +147,7 @@ public class SignalDAO {
             "'prosseguir_em_frente.mp4', " +
             "'Prosseguir em frente', " +
             "'ProsseguirFrente'," +
-            "12, " +
+            "0, " +
             "'true')"
         );
 
@@ -156,7 +156,7 @@ public class SignalDAO {
             "'Girar para esquerda', " +
             "'GirarParaEsquerda'," +
             "0, " +
-            "'false')"
+            "'true')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
@@ -164,7 +164,7 @@ public class SignalDAO {
             "'Girar para direita', " +
             "'GirarParaDireita'," +
             "0, " +
-            "'false')"
+            "'true')"
         );
 
         inserts.add("INSERT INTO movement (name_file, name, key, inserts_in_arff, active) VALUES (" +
