@@ -14,7 +14,7 @@ public class SignalDAO {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public void createAndInsertMovimentsTable() throws SQLException {
+    public void createAndInsertMovimentsTable() throws SQLException, ClassNotFoundException {
         String createTable = "CREATE TABLE IF NOT EXISTS movement (\n" +
             "name_file          VARCHAR(255)    PRIMARY KEY,\n" +
             "name               VARCHAR(255)    NOT NULL,\n" +
@@ -44,7 +44,7 @@ public class SignalDAO {
         });
     }
 
-    public Signal findOneByKey(String key) throws SQLException {
+    public Signal findOneByKey(String key) throws SQLException, ClassNotFoundException {
         String sql = "SELECT name_file, name, key, inserts_in_arff FROM movement WHERE key LIKE ?";
         Signal signal = new Signal();
 
@@ -69,7 +69,7 @@ public class SignalDAO {
         return signal;
     }
 
-    public void updateInsertsInArff(Signal signal) throws SQLException {
+    public void updateInsertsInArff(Signal signal) throws SQLException, ClassNotFoundException {
         String sql = "UPDATE movement SET inserts_in_arff = ? WHERE name_file LIKE ?";
 
         Connection connection = SQLiteConnectionConfig.getConnection();
@@ -83,7 +83,7 @@ public class SignalDAO {
         preparedStatement.close();
     }
 
-    public List<Signal> findAllWithActiveTrue() throws SQLException {
+    public List<Signal> findAllWithActiveTrue() throws SQLException, ClassNotFoundException {
         String sql = "SELECT name_file, name, key, inserts_in_arff FROM movement WHERE active LIKE 'true'";
         List<Signal> signals = new ArrayList<>();
 
