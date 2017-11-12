@@ -48,11 +48,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>sqlite</groupId>
+			<groupId>org.xerial</groupId>
 			<artifactId>sqlite-jdbc</artifactId>
-			<version>3.8.10.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/sqlite-jdbc-3.8.10.1.jar</systemPath>
+			<version>3.18.0</version>
 		</dependency>
 	</dependencies>
 
@@ -61,6 +59,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
