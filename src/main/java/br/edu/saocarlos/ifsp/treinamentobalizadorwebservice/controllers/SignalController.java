@@ -19,7 +19,7 @@ public class SignalController {
     private SignalService signalService;
 
     @RequestMapping(value = "/get-movements", method = RequestMethod.GET)
-    public List<Signal> getMoviments() throws SQLException {
+    public List<Signal> getMoviments() throws SQLException, ClassNotFoundException {
         return signalService.findAllWithActiveTrue();
     }
 

@@ -11,12 +11,12 @@ import java.util.List;
 @Service
 public class SignalService {
 
-    public List<Signal> findAllWithActiveTrue() throws SQLException {
+    public List<Signal> findAllWithActiveTrue() throws SQLException, ClassNotFoundException {
         SignalDAO signalDAO = new SignalDAO();
         return signalDAO.findAllWithActiveTrue();
     }
 
-    public void addInsertsOnArff(Movement movement) throws SQLException {
+    public void addInsertsOnArff(Movement movement) throws SQLException, ClassNotFoundException {
         SignalDAO signalDAO = new SignalDAO();
         Signal signal = signalDAO.findOneByKey(movement.getMovement());
 
