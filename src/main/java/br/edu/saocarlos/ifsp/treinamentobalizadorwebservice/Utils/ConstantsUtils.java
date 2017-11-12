@@ -2,7 +2,7 @@ package br.edu.saocarlos.ifsp.treinamentobalizadorwebservice.Utils;
 
 public enum ConstantsUtils {
 
-    DATABASE("jdbc:sqlite:/home/ubuntu/treinamento-balizador-webservice/src/main/resources/treinamento_balizador_db");
+    DATABASE("jdbc:sqlite:src/main/resources/treinamento_balizador_db");
 
     private String value;
 

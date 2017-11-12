@@ -10,11 +10,12 @@ public class SQLiteConnectionConfig {
 
     private static Connection CONNECTION;
 
-    private SQLiteConnectionConfig() throws SQLException {
+    private SQLiteConnectionConfig() throws SQLException, ClassNotFoundException {
+        Class.forName("org.sqlite.JDBC");
         CONNECTION = DriverManager.getConnection(ConstantsUtils.DATABASE.value());
     }
 
-    public static synchronized Connection getConnection() throws SQLException {
+    public static synchronized Connection getConnection() throws SQLException, ClassNotFoundException {
         if(CONNECTION == null) {
             new SQLiteConnectionConfig();
         }
